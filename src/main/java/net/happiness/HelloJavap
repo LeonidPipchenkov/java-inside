@@ -1,0 +1,55 @@
+$ javap -c -p Hello.class
+
+Compiled from "Hello.java"
+public class net.happiness.Hello {
+  public net.happiness.Hello();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  void test(net.happiness.Hello$X);
+    Code:
+       0: aload_1
+       1: invokevirtual #7                  // Method net/happiness/Hello$X.get:()Ljava/lang/Object;
+       4: astore_2
+       5: return
+}
+
+$ javap -c -p Hello$X.class
+
+Compiled from "Hello.java"
+class net.happiness.Hello$X {
+  net.happiness.Hello$X();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  java.lang.Object get();
+    Code:
+       0: aconst_null
+       1: areturn
+}
+
+$ javap -c -p Hello$Y.class
+
+Compiled from "Hello.java"
+class net.happiness.Hello$Y extends net.happiness.Hello$X {
+  net.happiness.Hello$Y();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method net/happiness/Hello$X."<init>":()V
+       4: return
+
+  java.lang.String get();
+    Code:
+       0: ldc           #7                  // String foo
+       2: areturn
+
+  java.lang.Object get();
+    Code:
+       0: aload_0
+       1: invokevirtual #9                  // Method get:()Ljava/lang/String;
+       4: areturn
+}
