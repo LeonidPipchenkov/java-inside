@@ -1,4 +1,4 @@
-package net.happiness;
+package net.happiness.classloader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +9,7 @@ public class TestClassLoader {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
-        String myRunnableName = "net.happiness.MyRunnable";
+        String myRunnableName = "net.happiness.classloader.MyRunnable";
 
         ClassLoader loader = new ClassLoader() {
             @Override

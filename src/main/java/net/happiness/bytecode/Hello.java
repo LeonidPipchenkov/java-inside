@@ -1,4 +1,4 @@
-package net.happiness;
+package net.happiness.bytecode;
 
 public class Hello {
 
